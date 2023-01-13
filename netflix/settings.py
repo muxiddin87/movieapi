@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-$3)%wnkp&yw1uszxu4&x+*3$%)vpc569s5bw0w_vdo4xpkxwxm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["moviesapi.muhiddin87.uz"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
