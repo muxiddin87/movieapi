@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_DB=uzmovi
+
+    ports:
+      - 8000:8000
+
+
+
+  db:
+    image: postgres:15.0
+    environment:
+      - POSTGRES_DB=uzmovi
+      - POSTGRES_USER=muxiddin87
+      - POSTGRES_PASSWORD=kamina87
+
+    ports:
+      - 5432:5432
+
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
