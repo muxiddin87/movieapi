@@ -1,11 +1,9 @@
 FROM python:3.11
 
-WORKDIR /code
+WORKDIR /app
 
-COPY . .
+COPY . /app/
 
 RUN pip install requirements.txt
 
-EXPOSE 8000
-
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["python","app.py"]
