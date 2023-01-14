@@ -31,6 +31,6 @@ class TestMovieViewSet(TestCase):
 
         self.assertEquals(response.status_code, 200)
         self.assertEquals(len(data), 1)
-        self.assertEquals(data[0]["name"], "Test Name")
+        self.assertEquals(data[0]["name"], "Test Movies")
 
 
