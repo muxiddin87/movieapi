@@ -6,7 +6,7 @@ from rest_framework.permissions import AllowAny
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Movie Application Rest Api",
+        title="Movie Api",
         default_version="v1",
         description="Swagger docs for Rest Api",
         ),
