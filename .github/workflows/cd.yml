@@ -38,7 +38,7 @@ jobs:
         with:
             host: moviesapi.muhiddin87.uz
             username: root
-            password: kaminA87$bek
+            key: {{secrets.KEY}}
             script:
               git pull
               systemctl restart gunicorn.service
