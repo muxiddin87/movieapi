@@ -38,7 +38,7 @@ jobs:
         with:
             host: moviesapi.muhiddin87.uz
             username: root
-            key: {{secrets.KEY}}
+            key: ${{ secrets.KEY }}
             script:
               cd movieapi
               git pull
