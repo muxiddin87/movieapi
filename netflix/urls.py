@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Movie Api",
+        title="Movies Api",
         default_version="v1",
         description="Swagger docs for Rest Api",
         ),
@@ -22,3 +22,5 @@ urlpatterns = [
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-docs'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='redoc-docs'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
