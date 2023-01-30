@@ -14,7 +14,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from django.contrib.auth import get_user_model
 
 class HelloWorldAPIView(APIView):
-    def get(self,request):
+    def get(self, request):
         return Response(data={"message": "Hello World"})
 
 class MoviesAPIView(APIView):
