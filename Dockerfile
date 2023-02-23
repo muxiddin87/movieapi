@@ -1,10 +1,12 @@
-FROM python:3.11
+FROM python:3.10.5
 
-WORKDIR /code
+WORKDIR /netflix_
 
 COPY . .
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install -r requirements.txt 
+
+RUN chmod +x ./entrypoint.sh
 
 EXPOSE 8000
 

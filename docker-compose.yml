@@ -1,29 +1,24 @@
-version: "3.8"
+version: '3'
 
 services:
   app:
     build: .
     depends_on:
       - db
-    
     environment:
-      - POSTGRES_HOST=localhost
-      - POSTGRES_DB=uzmovi
-
+      - POSTGRES_HOST=db
+      - POSTGRES_DB=postgres
+    container_name: netflix_app
     ports:
-      - 8000:8000
-
-
-
+      - "8000:8000"
+  
   db:
-    image: postgres:15.0
+    image: postgres:14
     environment:
-      - POSTGRES_DB=uzmovi
-      - POSTGRES_USER=muxiddin87
-      - POSTGRES_PASSWORD=kamina87
-
-    ports:
-      - 5432:5432
-
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1
+      - POSTGRES_HOST_AUTH_METHOD=trust 
+    container_name: netflix_db
     volumes:
-      - ./data/db:/var/lib/postgresql/data
+      - .:/netflix_
