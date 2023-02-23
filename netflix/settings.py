@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-$3)%wnkp&yw1uszxu4&x+*3$%)vpc569s5bw0w_vdo4xpkxwxm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["moviesapi.muxiddin87.uz"]
 
 
 # Application definition
@@ -76,7 +76,7 @@ DATABASES = {
         'NAME': 'uzmovi',
         'USER': 'muxiddin87',
         'PASSWORD': 'kamina87',
-        'HOST': '127.0.0.1',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
